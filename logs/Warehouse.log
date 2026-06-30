@@ -1,0 +1,2790 @@
+2026-06-30 15:26:44 - Starting Application using Java 21.0.8 with PID 7248 (R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 15:26:44 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 15:26:44 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-30 15:26:44 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-30 15:26:46 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 15:26:46 - Finished Spring Data repository scanning in 62 ms. Found 5 JPA repository interfaces.
+2026-06-30 15:26:47 - Tomcat initialized with port 9090 (http)
+2026-06-30 15:26:47 - Starting service [Tomcat]
+2026-06-30 15:26:47 - Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-30 15:26:47 - Initializing Spring embedded WebApplicationContext
+2026-06-30 15:26:47 - Root WebApplicationContext: initialization completed in 2512 ms
+2026-06-30 15:26:47 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 15:26:47 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 15:26:47 - HHH000026: Second-level cache disabled
+2026-06-30 15:26:47 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 15:26:47 - HikariPool-1 - Starting...
+2026-06-30 15:26:48 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3140c52f
+2026-06-30 15:26:48 - HikariPool-1 - Start completed.
+2026-06-30 15:26:48 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 15:26:49 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 15:26:49 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 15:26:50 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 15:26:50 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferController' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\controller\StockTransferController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+2026-06-30 15:26:50 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 15:26:50 - HikariPool-1 - Shutdown initiated...
+2026-06-30 15:26:50 - HikariPool-1 - Shutdown completed.
+2026-06-30 15:26:50 - Stopping service [Tomcat]
+2026-06-30 15:26:50 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-30 15:26:50 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferController' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\controller\StockTransferController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.techpalle.Application.main(Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1824)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 38 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:355)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:361)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1871)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1820)
+	... 49 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.Optional com.techpalle.repository.StockTransferRepository.findByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:260)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 61 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:95)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:460)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:436)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:389)
+	at org.springframework.util.ConcurrentReferenceHashMap$6.execute(ConcurrentReferenceHashMap.java:402)
+	at org.springframework.util.ConcurrentReferenceHashMap$Segment.doTask(ConcurrentReferenceHashMap.java:709)
+	at org.springframework.util.ConcurrentReferenceHashMap.doTask(ConcurrentReferenceHashMap.java:591)
+	at org.springframework.util.ConcurrentReferenceHashMap.computeIfAbsent(ConcurrentReferenceHashMap.java:396)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:367)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:345)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 65 common frames omitted
+2026-06-30 15:52:46 - Starting Application using Java 21.0.8 with PID 5344 (R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 15:52:46 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 15:52:46 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-30 15:52:46 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-30 15:52:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 15:52:48 - Finished Spring Data repository scanning in 184 ms. Found 5 JPA repository interfaces.
+2026-06-30 15:52:50 - Tomcat initialized with port 9090 (http)
+2026-06-30 15:52:50 - Starting service [Tomcat]
+2026-06-30 15:52:50 - Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-30 15:52:50 - Initializing Spring embedded WebApplicationContext
+2026-06-30 15:52:50 - Root WebApplicationContext: initialization completed in 4039 ms
+2026-06-30 15:52:50 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 15:52:51 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 15:52:51 - HHH000026: Second-level cache disabled
+2026-06-30 15:52:51 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 15:52:51 - HikariPool-1 - Starting...
+2026-06-30 15:52:52 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c278bb2
+2026-06-30 15:52:52 - HikariPool-1 - Start completed.
+2026-06-30 15:52:53 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 15:52:55 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 15:52:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 15:52:56 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 15:52:58 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferController' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\controller\StockTransferController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+2026-06-30 15:52:58 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 15:52:58 - HikariPool-1 - Shutdown initiated...
+2026-06-30 15:52:58 - HikariPool-1 - Shutdown completed.
+2026-06-30 15:52:58 - Stopping service [Tomcat]
+2026-06-30 15:52:58 - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-30 15:52:58 - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferController' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\controller\StockTransferController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1235)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1201)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:991)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.techpalle.Application.main(Application.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stockTransferServiceImpl' defined in file [R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes\com\techpalle\serviceimpl\StockTransferServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1393)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1230)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'stockTransferRepository' defined in com.techpalle.repository.StockTransferRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1824)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1777)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1660)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 38 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); Reason: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:120)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:104)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:92)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:92)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:434)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:355)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:361)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1871)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1820)
+	... 49 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract boolean com.techpalle.repository.StockTransferRepository.existsByIdAndDeletedAtIsNull(java.lang.Long); No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:107)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:128)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:260)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:116)
+	... 61 common frames omitted
+Caused by: org.springframework.data.mapping.PropertyReferenceException: No property 'deletedAt' found for type 'StockTransfer'
+	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:95)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:460)
+	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:436)
+	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:389)
+	at org.springframework.util.ConcurrentReferenceHashMap$6.execute(ConcurrentReferenceHashMap.java:402)
+	at org.springframework.util.ConcurrentReferenceHashMap$Segment.doTask(ConcurrentReferenceHashMap.java:709)
+	at org.springframework.util.ConcurrentReferenceHashMap.doTask(ConcurrentReferenceHashMap.java:591)
+	at org.springframework.util.ConcurrentReferenceHashMap.computeIfAbsent(ConcurrentReferenceHashMap.java:396)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:367)
+	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:345)
+	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:81)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.lambda$new$0(PartTree.java:259)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:260)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.lambda$new$0(PartTree.java:389)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:390)
+	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:103)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 65 common frames omitted
+2026-06-30 15:59:36 - Starting Application using Java 21.0.8 with PID 14032 (R:\Workspace_Project\04-WarehouseAllocationSystem\target\classes started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 15:59:36 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 15:59:36 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-30 15:59:36 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-30 15:59:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 15:59:38 - Finished Spring Data repository scanning in 159 ms. Found 5 JPA repository interfaces.
+2026-06-30 15:59:39 - Tomcat initialized with port 9090 (http)
+2026-06-30 15:59:39 - Starting service [Tomcat]
+2026-06-30 15:59:39 - Starting Servlet engine: [Apache Tomcat/10.1.55]
+2026-06-30 15:59:39 - Initializing Spring embedded WebApplicationContext
+2026-06-30 15:59:39 - Root WebApplicationContext: initialization completed in 3740 ms
+2026-06-30 15:59:40 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 15:59:40 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 15:59:40 - HHH000026: Second-level cache disabled
+2026-06-30 15:59:41 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 15:59:41 - HikariPool-1 - Starting...
+2026-06-30 15:59:42 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e55f4a0
+2026-06-30 15:59:42 - HikariPool-1 - Start completed.
+2026-06-30 15:59:42 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 15:59:45 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 15:59:45 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 15:59:46 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 15:59:48 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-30 15:59:49 - 46 mappings in 'requestMappingHandlerMapping'
+2026-06-30 15:59:49 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-30 15:59:49 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-30 15:59:49 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-30 15:59:50 - LiveReload server is running on port 35729
+2026-06-30 15:59:50 - Tomcat started on port 9090 (http) with context path '/'
+2026-06-30 15:59:50 - Started Application in 15.394 seconds (process running for 17.612)
+2026-06-30 16:06:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-30 16:06:29 - Initializing Servlet 'dispatcherServlet'
+2026-06-30 16:06:29 - Detected StandardServletMultipartResolver
+2026-06-30 16:06:29 - Detected AcceptHeaderLocaleResolver
+2026-06-30 16:06:29 - Detected FixedThemeResolver
+2026-06-30 16:06:29 - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5be64f92
+2026-06-30 16:06:29 - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1fd31b6c
+2026-06-30 16:06:29 - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-06-30 16:06:29 - Completed initialization in 13 ms
+2026-06-30 16:06:29 - POST "/api/v1/products", parameters={}
+2026-06-30 16:06:29 - Mapped to com.techpalle.controller.ProductController#createProduct(ProductRequestDTO)
+2026-06-30 16:06:29 - Read "application/json;charset=UTF-8" to [ProductRequestDTO(name=Laptop, sku=LAPTOP-001)]
+2026-06-30 16:06:29 - Creating product with SKU: LAPTOP-001
+2026-06-30 16:06:29 - Creating product with SKU: LAPTOP-001
+2026-06-30 16:06:30 - 
+    select
+        p1_0.id 
+    from
+        products p1_0 
+    where
+        p1_0.sku=? 
+    limit
+        ?
+2026-06-30 16:06:30 - 
+    insert 
+    into
+        products
+        (created_at, name, sku, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?)
+2026-06-30 16:06:30 - Product created with ID: 1
+2026-06-30 16:06:30 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:06:30 - Writing [ApiResponse(success=true, statusCode=201, message=Product created successfully, data=ProductResponse (truncated)...]
+2026-06-30 16:06:30 - Completed 201 CREATED
+2026-06-30 16:09:49 - POST "/api/v1/warehouses", parameters={}
+2026-06-30 16:09:49 - Mapped to com.techpalle.controller.WarehouseController#createWarehouse(WarehouseRequestDTO)
+2026-06-30 16:09:49 - Read "application/json;charset=UTF-8" to [WarehouseRequestDTO(name=Bangalore Warehouse, location=Bangalore, capacity=10000)]
+2026-06-30 16:09:49 - Creating warehouse: Bangalore Warehouse
+2026-06-30 16:09:49 - Creating warehouse: Bangalore Warehouse
+2026-06-30 16:09:49 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.name=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:09:49 - 
+    insert 
+    into
+        warehouses
+        (capacity, created_at, deleted_at, location, name, status, updated_at, used_capacity, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-30 16:09:49 - Warehouse created with ID: 1
+2026-06-30 16:09:49 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:09:49 - Writing [ApiResponse(success=true, statusCode=201, message=Warehouse created successfully, data=WarehouseResp (truncated)...]
+2026-06-30 16:09:49 - Completed 201 CREATED
+2026-06-30 16:11:51 - POST "/api/v1/warehouses", parameters={}
+2026-06-30 16:11:51 - Mapped to com.techpalle.controller.WarehouseController#createWarehouse(WarehouseRequestDTO)
+2026-06-30 16:11:51 - Read "application/json;charset=UTF-8" to [WarehouseRequestDTO(name=Chennai Warehouse, location=Chennai, capacity=15000)]
+2026-06-30 16:11:51 - Creating warehouse: Chennai Warehouse
+2026-06-30 16:11:51 - Creating warehouse: Chennai Warehouse
+2026-06-30 16:11:51 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.name=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:11:52 - 
+    insert 
+    into
+        warehouses
+        (capacity, created_at, deleted_at, location, name, status, updated_at, used_capacity, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-30 16:11:52 - Warehouse created with ID: 2
+2026-06-30 16:11:52 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:11:52 - Writing [ApiResponse(success=true, statusCode=201, message=Warehouse created successfully, data=WarehouseResp (truncated)...]
+2026-06-30 16:11:52 - Completed 201 CREATED
+2026-06-30 16:14:20 - POST "/api/v1/inventory/warehouse/1/product/1/initialize?quantity=500", parameters={masked}
+2026-06-30 16:14:20 - Mapped to com.techpalle.controller.WarehouseInventoryController#initializeInventory(Long, Long, Long)
+2026-06-30 16:14:20 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:14:21 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:14:21 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 16:14:21 - 
+    insert 
+    into
+        warehouse_inventory
+        (available_quantity, created_at, product_id, updated_at, version, warehouse_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-30 16:14:21 - 
+    update
+        warehouses 
+    set
+        capacity=?,
+        deleted_at=?,
+        location=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        used_capacity=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 16:14:21 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:14:21 - Writing [ApiResponse(success=true, statusCode=201, message=Inventory initialized successfully, data=Warehouse (truncated)...]
+2026-06-30 16:14:21 - Completed 201 CREATED
+2026-06-30 16:16:39 - GET "/api/v1/inventory/warehouse/1/product/1", parameters={}
+2026-06-30 16:16:39 - Mapped to com.techpalle.controller.WarehouseInventoryController#getInventory(Long, Long)
+2026-06-30 16:16:39 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 16:16:39 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 16:16:39 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:16:39 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:16:39 - Writing [ApiResponse(success=true, statusCode=200, message=Inventory retrieved successfully, data=WarehouseIn (truncated)...]
+2026-06-30 16:16:39 - Completed 200 OK
+2026-06-30 16:19:07 - GET "/api/v1/inventory/product/1/total-stock", parameters={}
+2026-06-30 16:19:07 - Mapped to com.techpalle.controller.WarehouseInventoryController#getTotalAvailableStock(Long)
+2026-06-30 16:19:07 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:19:07 - 
+    select
+        coalesce(sum(wi1_0.available_quantity), 0) 
+    from
+        warehouse_inventory wi1_0 
+    where
+        wi1_0.product_id=?
+2026-06-30 16:19:07 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:19:07 - Writing [ApiResponse(success=true, statusCode=200, message=Total stock retrieved successfully, data=500, erro (truncated)...]
+2026-06-30 16:19:07 - Completed 200 OK
+2026-06-30 16:33:41 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:33:41 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:33:41 - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.techpalle.dto.response.ApiResponse<com.techpalle.dto.response.AllocationResponseDTO>> com.techpalle.controller.AllocationController.allocateProduct(com.techpalle.dto.request.AllocationRequestDTO,java.lang.String): Content-Type 'text/plain;charset=UTF-8' is not supported
+2026-06-30 16:33:41 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 16:33:41 - Unexpected error
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:236)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 16:33:41 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:33:41 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 16:33:41 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-06-30 16:33:41 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 16:33:59 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:33:59 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:33:59 - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.techpalle.dto.response.ApiResponse<com.techpalle.dto.response.AllocationResponseDTO>> com.techpalle.controller.AllocationController.allocateProduct(com.techpalle.dto.request.AllocationRequestDTO,java.lang.String): Content-Type 'text/plain;charset=UTF-8' is not supported
+2026-06-30 16:33:59 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 16:33:59 - Unexpected error
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:236)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 16:33:59 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:33:59 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 16:33:59 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-06-30 16:33:59 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 16:40:33 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:40:33 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:40:33 - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.techpalle.dto.response.ApiResponse<com.techpalle.dto.response.AllocationResponseDTO>> com.techpalle.controller.AllocationController.allocateProduct(com.techpalle.dto.request.AllocationRequestDTO,java.lang.String): Content-Type 'text/plain;charset=UTF-8' is not supported
+2026-06-30 16:40:33 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 16:40:33 - Unexpected error
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:236)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 16:40:33 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:40:33 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 16:40:33 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-06-30 16:40:33 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 16:40:37 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:40:37 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:40:37 - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.techpalle.dto.response.ApiResponse<com.techpalle.dto.response.AllocationResponseDTO>> com.techpalle.controller.AllocationController.allocateProduct(com.techpalle.dto.request.AllocationRequestDTO,java.lang.String): Content-Type 'text/plain;charset=UTF-8' is not supported
+2026-06-30 16:40:37 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 16:40:37 - Unexpected error
+org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:236)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 16:40:37 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:40:37 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 16:40:37 - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2026-06-30 16:40:37 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 16:42:04 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:42:04 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:42:04 - Read "application/json;charset=UTF-8" to [AllocationRequestDTO(requestId=REQ-10001, productId=1, warehouseId=1, quantity=100, notes=Customer O (truncated)...]
+2026-06-30 16:42:04 - Allocating product 1 to warehouse 1
+2026-06-30 16:42:04 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.request_id=?
+2026-06-30 16:42:04 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:42:04 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:42:04 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleAllocationException(AllocationException, WebRequest)
+2026-06-30 16:42:04 - Allocation error: Warehouse is not active
+2026-06-30 16:42:04 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:42:04 - Writing [ApiResponse(success=false, statusCode=409, message=Allocation Error, data=null, errors=[Warehouse is (truncated)...]
+2026-06-30 16:42:04 - Resolved [com.techpalle.exception.AllocationException: Warehouse is not active]
+2026-06-30 16:42:04 - Completed 409 CONFLICT
+2026-06-30 16:47:18 - POST "/api/v1/allocations/1/confirm", parameters={}
+2026-06-30 16:47:18 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 16:47:18 - Unexpected error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 16:47:18 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:47:18 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 16:47:18 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-06-30 16:47:18 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 16:48:51 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:48:51 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:48:51 - Read "application/json;charset=UTF-8" to [AllocationRequestDTO(requestId=REQ-10001, productId=1, warehouseId=1, quantity=100, notes=Customer O (truncated)...]
+2026-06-30 16:48:51 - Allocating product 1 to warehouse 1
+2026-06-30 16:48:51 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.request_id=?
+2026-06-30 16:48:51 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:48:51 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:48:51 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleAllocationException(AllocationException, WebRequest)
+2026-06-30 16:48:51 - Allocation error: Warehouse is not active
+2026-06-30 16:48:51 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:48:51 - Writing [ApiResponse(success=false, statusCode=409, message=Allocation Error, data=null, errors=[Warehouse is (truncated)...]
+2026-06-30 16:48:51 - Resolved [com.techpalle.exception.AllocationException: Warehouse is not active]
+2026-06-30 16:48:51 - Completed 409 CONFLICT
+2026-06-30 16:51:55 - PUT "/api/v1/warehouses/1/activate", parameters={}
+2026-06-30 16:51:55 - Mapped to com.techpalle.controller.WarehouseController#activateWarehouse(Long)
+2026-06-30 16:51:55 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:51:55 - 
+    update
+        warehouses 
+    set
+        capacity=?,
+        deleted_at=?,
+        location=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        used_capacity=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 16:51:55 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:51:55 - Writing [ApiResponse(success=true, statusCode=200, message=Warehouse activated successfully, data=WarehouseRe (truncated)...]
+2026-06-30 16:51:55 - Completed 200 OK
+2026-06-30 16:52:57 - PUT "/api/v1/warehouses/2/activate", parameters={}
+2026-06-30 16:52:57 - Mapped to com.techpalle.controller.WarehouseController#activateWarehouse(Long)
+2026-06-30 16:52:57 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:52:57 - 
+    update
+        warehouses 
+    set
+        capacity=?,
+        deleted_at=?,
+        location=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        used_capacity=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 16:52:57 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:52:57 - Writing [ApiResponse(success=true, statusCode=200, message=Warehouse activated successfully, data=WarehouseRe (truncated)...]
+2026-06-30 16:52:57 - Completed 200 OK
+2026-06-30 16:59:11 - POST "/api/v1/allocations", parameters={}
+2026-06-30 16:59:11 - Mapped to com.techpalle.controller.AllocationController#allocateProduct(AllocationRequestDTO, String)
+2026-06-30 16:59:11 - Read "application/json;charset=UTF-8" to [AllocationRequestDTO(requestId=REQ-10001, productId=1, warehouseId=1, quantity=100, notes=Customer O (truncated)...]
+2026-06-30 16:59:11 - Allocating product 1 to warehouse 1
+2026-06-30 16:59:11 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.request_id=?
+2026-06-30 16:59:11 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 16:59:11 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 16:59:11 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 16:59:11 - 
+    insert 
+    into
+        allocations
+        (allocated_at, allocated_by, cancelled_at, created_at, notes, product_id, quantity, request_id, status, updated_at, version, warehouse_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-30 16:59:11 - Allocation created successfully with ID 1
+2026-06-30 16:59:11 - 
+    update
+        warehouse_inventory 
+    set
+        available_quantity=?,
+        product_id=?,
+        updated_at=?,
+        version=?,
+        warehouse_id=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 16:59:11 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 16:59:11 - Writing [ApiResponse(success=true, statusCode=201, message=Product allocated successfully, data=AllocationRes (truncated)...]
+2026-06-30 16:59:11 - Completed 201 CREATED
+2026-06-30 17:01:59 - POST "/api/v1/allocations/auto-allocate", parameters={}
+2026-06-30 17:01:59 - Mapped to com.techpalle.controller.AllocationController#autoAllocateProduct(AutoAllocationRequestDTO, String)
+2026-06-30 17:01:59 - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.techpalle.dto.response.ApiResponse<com.techpalle.dto.response.AllocationResponseDTO>> com.techpalle.controller.AllocationController.autoAllocateProduct(com.techpalle.dto.request.AutoAllocationRequestDTO,java.lang.String): JSON parse error: Cannot construct instance of `com.techpalle.dto.request.AutoAllocationRequestDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('requestId')
+2026-06-30 17:01:59 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:01:59 - Unexpected error
+org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.techpalle.dto.request.AutoAllocationRequestDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('requestId')
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:408)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.read(AbstractJackson2HttpMessageConverter.java:356)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:204)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:176)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:150)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:227)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:181)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.techpalle.dto.request.AutoAllocationRequestDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('requestId')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 3, column: 3]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:76)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1801)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1426)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._deserializeFromString(StdDeserializer.java:310)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromString(BeanDeserializerBase.java:1594)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeOther(BeanDeserializer.java:189)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:179)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectReader._bindAndClose(ObjectReader.java:2148)
+	at com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:1504)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:397)
+	... 51 common frames omitted
+2026-06-30 17:01:59 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:01:59 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:01:59 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.techpalle.dto.request.AutoAllocationRequestDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('requestId')]
+2026-06-30 17:01:59 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:03:10 - POST "/api/v1/allocations/auto-allocate", parameters={}
+2026-06-30 17:03:10 - Mapped to com.techpalle.controller.AllocationController#autoAllocateProduct(AutoAllocationRequestDTO, String)
+2026-06-30 17:03:10 - Read "application/json;charset=UTF-8" to [AutoAllocationRequestDTO(requestId=REQ-10002, productId=1, quantity=50, notes=Auto Allocation)]
+2026-06-30 17:03:10 - Auto allocating product 1 quantity 50
+2026-06-30 17:03:10 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.request_id=?
+2026-06-30 17:03:10 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:03:10 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    where
+        wi1_0.product_id=? 
+        and wi1_0.available_quantity>0 
+    order by
+        wi1_0.available_quantity desc
+2026-06-30 17:03:10 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:03:10 - 
+    insert 
+    into
+        allocations
+        (allocated_at, allocated_by, cancelled_at, created_at, notes, product_id, quantity, request_id, status, updated_at, version, warehouse_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-30 17:03:10 - 
+    update
+        warehouse_inventory 
+    set
+        available_quantity=?,
+        product_id=?,
+        updated_at=?,
+        version=?,
+        warehouse_id=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:03:10 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:03:10 - Writing [ApiResponse(success=true, statusCode=201, message=Product auto allocated successfully, data=Allocati (truncated)...]
+2026-06-30 17:03:10 - Completed 201 CREATED
+2026-06-30 17:04:45 - GET "/api/v1/allocations/1", parameters={}
+2026-06-30 17:04:45 - Mapped to com.techpalle.controller.AllocationController#getAllocation(Long)
+2026-06-30 17:04:45 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.id=?
+2026-06-30 17:04:45 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:04:45 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:04:45 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:04:45 - Writing [ApiResponse(success=true, statusCode=200, message=Allocation retrieved successfully, data=Allocation (truncated)...]
+2026-06-30 17:04:45 - Completed 200 OK
+2026-06-30 17:07:49 - GET "/api/v1/allocations/request/REQ-10001", parameters={}
+2026-06-30 17:07:49 - Mapped to com.techpalle.controller.AllocationController#getByRequestId(String)
+2026-06-30 17:07:49 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.request_id=?
+2026-06-30 17:07:49 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:07:49 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:07:49 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:07:49 - Writing [ApiResponse(success=true, statusCode=200, message=Allocation retrieved successfully, data=Allocation (truncated)...]
+2026-06-30 17:07:49 - Completed 200 OK
+2026-06-30 17:08:56 - GET "//api/v1/allocations?page=0&size=10", parameters={masked}
+2026-06-30 17:08:56 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-06-30 17:08:56 - Resource not found for path [api/v1/allocations]
+2026-06-30 17:08:56 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:08:56 - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/allocations.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 17:08:56 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:08:56 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:08:56 - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/allocations.]
+2026-06-30 17:08:56 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:09:12 - GET "/api/v1/allocations?page=0&size=10", parameters={masked}
+2026-06-30 17:09:12 - Mapped to com.techpalle.controller.AllocationController#getAllAllocations(int, int, String, String)
+2026-06-30 17:09:12 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    order by
+        a1_0.allocated_at desc 
+    limit
+        ?, ?
+2026-06-30 17:09:12 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:09:12 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:09:12 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:09:12 - Writing [ApiResponse(success=true, statusCode=200, message=Allocations retrieved successfully, data=Paginated (truncated)...]
+2026-06-30 17:09:12 - Completed 200 OK
+2026-06-30 17:13:18 - GET "/api/v1/allocations/warehouse/1", parameters={}
+2026-06-30 17:13:18 - Mapped to com.techpalle.controller.AllocationController#getAllocationsByWarehouse(Long, int, int)
+2026-06-30 17:13:18 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 17:13:18 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=a1_0.warehouse_id 
+    where
+        w1_0.id=? 
+    order by
+        a1_0.allocated_at desc 
+    limit
+        ?
+2026-06-30 17:13:18 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:13:18 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:13:18 - Writing [ApiResponse(success=true, statusCode=200, message=Allocations retrieved successfully, data=Paginated (truncated)...]
+2026-06-30 17:13:18 - Completed 200 OK
+2026-06-30 17:15:42 - GET "/api/v1/allocations/search/date-range?startDate=2026-06-01T00:00:00&endDate=2026-06-30T23:59:59", parameters={masked}
+2026-06-30 17:15:42 - Mapped to com.techpalle.controller.AllocationController#getAllocationsByDateRange(LocalDateTime, LocalDateTime, int, int)
+2026-06-30 17:15:42 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.allocated_at between ? and ? 
+    limit
+        ?
+2026-06-30 17:15:42 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:15:42 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:15:42 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:15:42 - Writing [ApiResponse(success=true, statusCode=200, message=Allocations retrieved successfully, data=Paginated (truncated)...]
+2026-06-30 17:15:42 - Completed 200 OK
+2026-06-30 17:20:27 - PUT "/api/v1/allocations/2/confirm", parameters={}
+2026-06-30 17:20:27 - Mapped to com.techpalle.controller.AllocationController#confirmAllocation(Long)
+2026-06-30 17:20:27 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.id=?
+2026-06-30 17:20:27 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleAllocationException(AllocationException, WebRequest)
+2026-06-30 17:20:27 - Allocation error: Allocation already confirmed
+2026-06-30 17:20:27 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:20:27 - Writing [ApiResponse(success=false, statusCode=409, message=Allocation Error, data=null, errors=[Allocation a (truncated)...]
+2026-06-30 17:20:27 - Resolved [com.techpalle.exception.AllocationException: Allocation already confirmed]
+2026-06-30 17:20:27 - Completed 409 CONFLICT
+2026-06-30 17:20:44 - PUT "/api/v1/allocations/1/confirm", parameters={}
+2026-06-30 17:20:44 - Mapped to com.techpalle.controller.AllocationController#confirmAllocation(Long)
+2026-06-30 17:20:44 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.id=?
+2026-06-30 17:20:44 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleAllocationException(AllocationException, WebRequest)
+2026-06-30 17:20:44 - Allocation error: Allocation already confirmed
+2026-06-30 17:20:44 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:20:44 - Writing [ApiResponse(success=false, statusCode=409, message=Allocation Error, data=null, errors=[Allocation a (truncated)...]
+2026-06-30 17:20:44 - Resolved [com.techpalle.exception.AllocationException: Allocation already confirmed]
+2026-06-30 17:20:44 - Completed 409 CONFLICT
+2026-06-30 17:21:26 - PUT "/api/v1/allocations/2/cancel", parameters={}
+2026-06-30 17:21:26 - Mapped to com.techpalle.controller.AllocationController#cancelAllocation(Long)
+2026-06-30 17:21:26 - 
+    select
+        a1_0.id,
+        a1_0.allocated_at,
+        a1_0.allocated_by,
+        a1_0.cancelled_at,
+        a1_0.created_at,
+        a1_0.notes,
+        a1_0.product_id,
+        a1_0.quantity,
+        a1_0.request_id,
+        a1_0.status,
+        a1_0.updated_at,
+        a1_0.version,
+        a1_0.warehouse_id 
+    from
+        allocations a1_0 
+    where
+        a1_0.id=?
+2026-06-30 17:21:26 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 17:21:26 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:21:26 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:21:26 - 
+    update
+        allocations 
+    set
+        allocated_at=?,
+        allocated_by=?,
+        cancelled_at=?,
+        notes=?,
+        product_id=?,
+        quantity=?,
+        request_id=?,
+        status=?,
+        updated_at=?,
+        version=?,
+        warehouse_id=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:21:26 - 
+    update
+        warehouse_inventory 
+    set
+        available_quantity=?,
+        product_id=?,
+        updated_at=?,
+        version=?,
+        warehouse_id=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:21:26 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:21:26 - Writing [ApiResponse(success=true, statusCode=200, message=Allocation cancelled successfully, data=Allocation (truncated)...]
+2026-06-30 17:21:26 - Completed 200 OK
+2026-06-30 17:25:35 - POST "/api/v1/stock-transfers", parameters={}
+2026-06-30 17:25:35 - Mapped to com.techpalle.controller.StockTransferController#initiateTransfer(StockTransferRequestDTO, String)
+2026-06-30 17:25:35 - Read "application/json;charset=UTF-8" to [StockTransferRequestDTO(sourceWarehouseId=1, targetWarehouseId=2, productId=1, quantity=50, notes=Tr (truncated)...]
+2026-06-30 17:25:35 - Transfer initiated from warehouse 1 to warehouse 2
+2026-06-30 17:25:35 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 17:25:35 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 17:25:35 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:25:35 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 17:25:35 - 
+    update
+        warehouse_inventory 
+    set
+        available_quantity=?,
+        product_id=?,
+        updated_at=?,
+        version=?,
+        warehouse_id=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:25:35 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    left join
+        warehouses w1_0 
+            on w1_0.id=wi1_0.warehouse_id 
+    left join
+        products p1_0 
+            on p1_0.id=wi1_0.product_id 
+    where
+        w1_0.id=? 
+        and p1_0.id=?
+2026-06-30 17:25:35 - 
+    insert 
+    into
+        warehouse_inventory
+        (available_quantity, created_at, product_id, updated_at, version, warehouse_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-30 17:25:35 - 
+    insert 
+    into
+        stock_transfers
+        (created_at, notes, product_id, quantity, source_warehouse_id, status, target_warehouse_id, transfer_date, transferred_by, updated_at, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-30 17:25:35 - 
+    update
+        warehouses 
+    set
+        capacity=?,
+        deleted_at=?,
+        location=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        used_capacity=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:25:35 - 
+    update
+        warehouses 
+    set
+        capacity=?,
+        deleted_at=?,
+        location=?,
+        name=?,
+        status=?,
+        updated_at=?,
+        used_capacity=?,
+        version=? 
+    where
+        id=? 
+        and version=?
+2026-06-30 17:25:35 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:25:35 - Writing [ApiResponse(success=true, statusCode=201, message=Stock transfer created successfully, data=StockTra (truncated)...]
+2026-06-30 17:25:35 - Completed 201 CREATED
+2026-06-30 17:27:02 - PUT "/api/v1/stock-transfers/1", parameters={}
+2026-06-30 17:27:02 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:27:02 - Unexpected error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 17:27:02 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:27:02 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:27:02 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2026-06-30 17:27:02 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:27:08 - PUT "/api/v1/stock-transfers/2", parameters={}
+2026-06-30 17:27:08 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:27:08 - Unexpected error
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:509)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 17:27:08 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:27:08 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:27:08 - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2026-06-30 17:27:08 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:27:21 - GET "/api/v1/stock-transfers/1", parameters={}
+2026-06-30 17:27:21 - Mapped to com.techpalle.controller.StockTransferController#getTransfer(Long)
+2026-06-30 17:27:21 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    where
+        st1_0.id=?
+2026-06-30 17:27:21 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:27:21 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:27:21 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:27:21 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:27:21 - Writing [ApiResponse(success=true, statusCode=200, message=Transfer retrieved successfully, data=StockTransfe (truncated)...]
+2026-06-30 17:27:21 - Completed 200 OK
+2026-06-30 17:28:07 - GET "/api/v1/stock-transfers", parameters={}
+2026-06-30 17:28:07 - Mapped to com.techpalle.controller.StockTransferController#getAllTransfers(int, int, String, String)
+2026-06-30 17:28:07 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    order by
+        st1_0.transfer_date desc 
+    limit
+        ?, ?
+2026-06-30 17:28:07 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:28:07 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:28:07 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:28:07 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:28:07 - Writing [ApiResponse(success=true, statusCode=200, message=Transfers retrieved successfully, data=PaginatedRe (truncated)...]
+2026-06-30 17:28:07 - Completed 200 OK
+2026-06-30 17:29:12 - GET "/GET%20/api/v1/stock-transfers/warehouse/from/1", parameters={}
+2026-06-30 17:29:12 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-06-30 17:29:12 - Resource not found for path [GET%20/api/v1/stock-transfers/warehouse/from/1]
+2026-06-30 17:29:12 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:29:12 - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource GET%20/api/v1/stock-transfers/warehouse/from/1.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 17:29:12 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:29:12 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:29:12 - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource GET%20/api/v1/stock-transfers/warehouse/from/1.]
+2026-06-30 17:29:12 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:29:27 - GET "/api/v1/stock-transfers/warehouse/from/1", parameters={}
+2026-06-30 17:29:27 - Mapped to com.techpalle.controller.StockTransferController#getTransfersFromWarehouse(Long, int, int)
+2026-06-30 17:29:27 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=? 
+        and w1_0.deleted_at is null
+2026-06-30 17:29:27 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    left join
+        warehouses sw1_0 
+            on sw1_0.id=st1_0.source_warehouse_id 
+    where
+        sw1_0.id=? 
+    order by
+        st1_0.transfer_date desc 
+    limit
+        ?
+2026-06-30 17:29:27 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:29:27 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:29:27 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:29:27 - Writing [ApiResponse(success=true, statusCode=200, message=Transfers retrieved successfully, data=PaginatedRe (truncated)...]
+2026-06-30 17:29:27 - Completed 200 OK
+2026-06-30 17:30:56 - GET "/api/v1/stock-transfers/product/1", parameters={}
+2026-06-30 17:30:56 - Mapped to com.techpalle.controller.StockTransferController#getTransfersByProduct(Long, int, int)
+2026-06-30 17:30:56 - 
+    select
+        count(*) 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:30:56 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    left join
+        products p1_0 
+            on p1_0.id=st1_0.product_id 
+    where
+        p1_0.id=? 
+    order by
+        st1_0.transfer_date desc 
+    limit
+        ?
+2026-06-30 17:30:56 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:30:56 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:30:56 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:30:56 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:30:56 - Writing [ApiResponse(success=true, statusCode=200, message=Transfers retrieved successfully, data=PaginatedRe (truncated)...]
+2026-06-30 17:30:56 - Completed 200 OK
+2026-06-30 17:32:34 - PUT "/api/v1/stock-transfers/1/complete", parameters={}
+2026-06-30 17:32:34 - Mapped to com.techpalle.controller.StockTransferController#completeTransfer(Long)
+2026-06-30 17:32:34 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    where
+        st1_0.id=?
+2026-06-30 17:32:34 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleBusinessException(BusinessException, WebRequest)
+2026-06-30 17:32:34 - Business exception: Transfer already completed
+2026-06-30 17:32:34 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:32:34 - Writing [ApiResponse(success=false, statusCode=400, message=Business Error, data=null, errors=[Transfer alrea (truncated)...]
+2026-06-30 17:32:34 - Resolved [com.techpalle.exception.BusinessException: Transfer already completed]
+2026-06-30 17:32:34 - Completed 400 BAD_REQUEST
+2026-06-30 17:33:19 - PUT "/api/v1/stock-transfers/2/complete", parameters={}
+2026-06-30 17:33:19 - Mapped to com.techpalle.controller.StockTransferController#completeTransfer(Long)
+2026-06-30 17:33:19 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    where
+        st1_0.id=?
+2026-06-30 17:33:19 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleResourceNotFoundException(ResourceNotFoundException, WebRequest)
+2026-06-30 17:33:19 - Resource not found: StockTransfer not found with id: '2'
+2026-06-30 17:33:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:33:19 - Writing [ApiResponse(success=false, statusCode=404, message=Resource Not Found, data=null, errors=[StockTrans (truncated)...]
+2026-06-30 17:33:19 - Resolved [com.techpalle.exception.ResourceNotFoundException: StockTransfer not found with id: '2']
+2026-06-30 17:33:19 - Completed 404 NOT_FOUND
+2026-06-30 17:33:27 - PUT "/api/v1/stock-transfers/1/complete", parameters={}
+2026-06-30 17:33:27 - Mapped to com.techpalle.controller.StockTransferController#completeTransfer(Long)
+2026-06-30 17:33:27 - 
+    select
+        st1_0.id,
+        st1_0.created_at,
+        st1_0.notes,
+        st1_0.product_id,
+        st1_0.quantity,
+        st1_0.source_warehouse_id,
+        st1_0.status,
+        st1_0.target_warehouse_id,
+        st1_0.transfer_date,
+        st1_0.transferred_by,
+        st1_0.updated_at,
+        st1_0.version 
+    from
+        stock_transfers st1_0 
+    where
+        st1_0.id=?
+2026-06-30 17:33:27 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleBusinessException(BusinessException, WebRequest)
+2026-06-30 17:33:27 - Business exception: Transfer already completed
+2026-06-30 17:33:27 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:33:27 - Writing [ApiResponse(success=false, statusCode=400, message=Business Error, data=null, errors=[Transfer alrea (truncated)...]
+2026-06-30 17:33:27 - Resolved [com.techpalle.exception.BusinessException: Transfer already completed]
+2026-06-30 17:33:27 - Completed 400 BAD_REQUEST
+2026-06-30 17:34:22 - GET "/api/v1/inventory/product/1/available-warehouses", parameters={}
+2026-06-30 17:34:22 - Mapped to com.techpalle.controller.WarehouseInventoryController#getAvailableWarehouses(Long)
+2026-06-30 17:34:22 - 
+    select
+        p1_0.id,
+        p1_0.created_at,
+        p1_0.name,
+        p1_0.sku,
+        p1_0.updated_at,
+        p1_0.version 
+    from
+        products p1_0 
+    where
+        p1_0.id=?
+2026-06-30 17:34:22 - 
+    select
+        wi1_0.id,
+        wi1_0.available_quantity,
+        wi1_0.created_at,
+        wi1_0.product_id,
+        wi1_0.updated_at,
+        wi1_0.version,
+        wi1_0.warehouse_id 
+    from
+        warehouse_inventory wi1_0 
+    where
+        wi1_0.product_id=? 
+        and wi1_0.available_quantity>0 
+    order by
+        wi1_0.available_quantity desc
+2026-06-30 17:34:22 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:34:22 - 
+    select
+        w1_0.id,
+        w1_0.capacity,
+        w1_0.created_at,
+        w1_0.deleted_at,
+        w1_0.location,
+        w1_0.name,
+        w1_0.status,
+        w1_0.updated_at,
+        w1_0.used_capacity,
+        w1_0.version 
+    from
+        warehouses w1_0 
+    where
+        w1_0.id=?
+2026-06-30 17:34:22 - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:34:22 - Writing [ApiResponse(success=true, statusCode=200, message=Available warehouses retrieved successfully, data= (truncated)...]
+2026-06-30 17:34:22 - Completed 200 OK
+2026-06-30 17:35:26 - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2026-06-30 17:35:26 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2026-06-30 17:35:26 - Completed 200 OK
+2026-06-30 17:35:26 - GET "/v3/api-docs/swagger-config", parameters={}
+2026-06-30 17:35:26 - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2026-06-30 17:35:26 - Using 'application/json', given [*/*] and supported [application/json]
+2026-06-30 17:35:26 - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:9090/swagger-ui/oauth2-re (truncated)...]
+2026-06-30 17:35:26 - Completed 200 OK
+2026-06-30 17:35:27 - GET "/v3/api-docs", parameters={}
+2026-06-30 17:35:27 - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-06-30 17:35:28 - Init duration for springdoc-openapi is: 1508 ms
+2026-06-30 17:35:28 - Using 'application/json', given [application/json, */*] and supported [application/json]
+2026-06-30 17:35:28 - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-06-30 17:35:28 - Completed 200 OK
+2026-06-30 17:35:37 - GET "/v3/api-docs", parameters={}
+2026-06-30 17:35:37 - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2026-06-30 17:35:37 - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json]
+2026-06-30 17:35:37 - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 49, 46, 48, 34, 44, 34, 105, 110, 10 (truncated)...]
+2026-06-30 17:35:37 - Completed 200 OK
+2026-06-30 17:35:37 - GET "/favicon.ico", parameters={}
+2026-06-30 17:35:37 - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2026-06-30 17:35:37 - Resource not found for path [favicon.ico]
+2026-06-30 17:35:37 - Using @ExceptionHandler com.techpalle.exception.GlobalExceptionHandler#handleGlobalException(Exception, WebRequest)
+2026-06-30 17:35:37 - Unexpected error
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:585)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:138)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1797)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:973)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:491)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-06-30 17:35:37 - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json, application/yaml]
+2026-06-30 17:35:37 - Writing [ApiResponse(success=false, statusCode=500, message=Internal Server Error, data=null, errors=[Unexpec (truncated)...]
+2026-06-30 17:35:37 - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-06-30 17:35:37 - Completed 500 INTERNAL_SERVER_ERROR
+2026-06-30 17:38:22 - Application shutdown requested.
+2026-06-30 17:38:22 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-30 17:38:22 - Graceful shutdown complete
+2026-06-30 17:38:22 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 17:38:22 - HikariPool-1 - Shutdown initiated...
+2026-06-30 17:38:22 - HikariPool-1 - Shutdown completed.
+2026-06-30 17:45:24 - Starting ApplicationTests using Java 21.0.8 with PID 3428 (started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 17:45:24 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 17:45:24 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@66a53104
+2026-06-30 17:45:25 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 17:45:25 - Finished Spring Data repository scanning in 73 ms. Found 5 JPA repository interfaces.
+2026-06-30 17:45:25 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 17:45:25 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 17:45:25 - HHH000026: Second-level cache disabled
+2026-06-30 17:45:26 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 17:45:26 - HikariPool-1 - Starting...
+2026-06-30 17:45:26 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ee22768
+2026-06-30 17:45:26 - HikariPool-1 - Start completed.
+2026-06-30 17:45:26 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 17:45:27 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 17:45:27 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 17:45:27 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 17:45:28 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-30 17:45:28 - 46 mappings in 'requestMappingHandlerMapping'
+2026-06-30 17:45:28 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-30 17:45:28 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-30 17:45:28 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-30 17:45:29 - Started ApplicationTests in 5.054 seconds (process running for 7.904)
+2026-06-30 17:45:29 - Closing org.springframework.web.context.support.GenericWebApplicationContext@66a53104, started on Tue Jun 30 17:45:24 IST 2026
+2026-06-30 17:45:29 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 17:45:29 - HikariPool-1 - Shutdown initiated...
+2026-06-30 17:45:29 - HikariPool-1 - Shutdown completed.
+2026-06-30 17:54:33 - Starting ApplicationTests using Java 21.0.8 with PID 10372 (started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 17:54:33 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 17:54:33 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@297c9a9b
+2026-06-30 17:54:34 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 17:54:34 - Finished Spring Data repository scanning in 70 ms. Found 5 JPA repository interfaces.
+2026-06-30 17:54:35 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 17:54:35 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 17:54:35 - HHH000026: Second-level cache disabled
+2026-06-30 17:54:35 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 17:54:35 - HikariPool-1 - Starting...
+2026-06-30 17:54:35 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38a52072
+2026-06-30 17:54:35 - HikariPool-1 - Start completed.
+2026-06-30 17:54:35 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 17:54:36 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 17:54:36 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 17:54:36 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 17:54:37 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-30 17:54:38 - 46 mappings in 'requestMappingHandlerMapping'
+2026-06-30 17:54:38 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-30 17:54:38 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-30 17:54:38 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-30 17:54:38 - Started ApplicationTests in 5.142 seconds (process running for 7.425)
+2026-06-30 17:54:38 - Creating product with SKU: LAPTOP-001
+2026-06-30 17:54:38 - Product created with ID: 1
+2026-06-30 17:54:38 - Creating product with SKU: LAPTOP-001
+2026-06-30 17:54:38 - Creating product with SKU: LAPTOP-001
+2026-06-30 17:54:38 - Closing org.springframework.web.context.support.GenericWebApplicationContext@297c9a9b, started on Tue Jun 30 17:54:33 IST 2026
+2026-06-30 17:54:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 17:54:38 - HikariPool-1 - Shutdown initiated...
+2026-06-30 17:54:38 - HikariPool-1 - Shutdown completed.
+2026-06-30 18:05:54 - Starting ApplicationTests using Java 21.0.8 with PID 16892 (started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 18:05:54 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 18:05:54 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@69a024a0
+2026-06-30 18:05:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 18:05:55 - Finished Spring Data repository scanning in 54 ms. Found 5 JPA repository interfaces.
+2026-06-30 18:05:55 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 18:05:56 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 18:05:56 - HHH000026: Second-level cache disabled
+2026-06-30 18:05:56 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 18:05:56 - HikariPool-1 - Starting...
+2026-06-30 18:05:56 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4407fea2
+2026-06-30 18:05:56 - HikariPool-1 - Start completed.
+2026-06-30 18:05:56 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 18:05:57 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 18:05:57 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 18:05:57 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 18:05:58 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-30 18:05:58 - 46 mappings in 'requestMappingHandlerMapping'
+2026-06-30 18:05:58 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-30 18:05:59 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-30 18:05:59 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-30 18:05:59 - Started ApplicationTests in 4.845 seconds (process running for 7.28)
+2026-06-30 18:05:59 - Creating product with SKU: LAPTOP-001
+2026-06-30 18:05:59 - Product created with ID: 1
+2026-06-30 18:05:59 - Creating product with SKU: LAPTOP-001
+2026-06-30 18:05:59 - Creating product with SKU: LAPTOP-001
+2026-06-30 18:05:59 - Closing org.springframework.web.context.support.GenericWebApplicationContext@69a024a0, started on Tue Jun 30 18:05:54 IST 2026
+2026-06-30 18:05:59 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 18:05:59 - HikariPool-1 - Shutdown initiated...
+2026-06-30 18:05:59 - HikariPool-1 - Shutdown completed.
+2026-06-30 18:18:26 - Starting ApplicationTests using Java 21.0.8 with PID 2120 (started by rahul in R:\Workspace_Project\04-WarehouseAllocationSystem)
+2026-06-30 18:18:26 - No active profile set, falling back to 1 default profile: "default"
+2026-06-30 18:18:26 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@78da899f
+2026-06-30 18:18:28 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-30 18:18:28 - Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2026-06-30 18:18:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-30 18:18:28 - HHH000412: Hibernate ORM core version 6.6.53.Final
+2026-06-30 18:18:28 - HHH000026: Second-level cache disabled
+2026-06-30 18:18:28 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-30 18:18:28 - HikariPool-1 - Starting...
+2026-06-30 18:18:29 - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59b3f162
+2026-06-30 18:18:29 - HikariPool-1 - Start completed.
+2026-06-30 18:18:29 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-30 18:18:30 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-30 18:18:30 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 18:18:30 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-30 18:18:31 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-30 18:18:31 - 46 mappings in 'requestMappingHandlerMapping'
+2026-06-30 18:18:31 - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-06-30 18:18:31 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-06-30 18:18:31 - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-06-30 18:18:31 - Started ApplicationTests in 5.488 seconds (process running for 8.287)
+2026-06-30 18:18:32 - Creating product with SKU: LAPTOP-001
+2026-06-30 18:18:32 - Creating product with SKU: LAPTOP-001
+2026-06-30 18:18:32 - Product created with ID: 1
+2026-06-30 18:18:32 - Creating warehouse: Main Warehouse
+2026-06-30 18:18:32 - Creating warehouse: Main Warehouse
+2026-06-30 18:18:32 - Warehouse created with ID: 1
+2026-06-30 18:18:32 - Closing org.springframework.web.context.support.GenericWebApplicationContext@78da899f, started on Tue Jun 30 18:18:26 IST 2026
+2026-06-30 18:18:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-30 18:18:32 - HikariPool-1 - Shutdown initiated...
+2026-06-30 18:18:32 - HikariPool-1 - Shutdown completed.
